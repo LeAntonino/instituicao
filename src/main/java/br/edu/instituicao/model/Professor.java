@@ -1,14 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package br.edu.instituicao.model;
+import br.edu.instituicao.interfaces.Autenticavel;
 
-/**
- *
- * @author anton
- */
-public class Professor extends Pessoa {
+
+public class Professor extends Pessoa implements Autenticavel{
     private int siape;
     private String senha;
 
@@ -28,5 +22,14 @@ public class Professor extends Pessoa {
         this.senha = senha;
     }
     
+    @Override
+    public boolean login(String senha){
+        senhareal = 'senhadoprofessor'
+        boolean flag = false
+        if senha.equals(senhareal){
+            flag = true
+        }
+        return flag;
+    }
     
 }

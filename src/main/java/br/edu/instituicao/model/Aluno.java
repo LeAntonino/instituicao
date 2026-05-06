@@ -1,10 +1,8 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package br.edu.instituicao.model;
 
-public class Aluno extends Pessoa {
+import br.edu.instituicao.interfaces.Avaliavel;
+
+public class Aluno extends Pessoa implements Avaliavel {
     private int matricula;
     private float[] notas = new float[4];
 
@@ -23,6 +21,16 @@ public class Aluno extends Pessoa {
     public void setNotas(float[] notas) {
         this.notas = notas;
     }
+    
+    @Override
+    public double getMediaFinal(){
+        double soma = 0;
+        for(double i : notas){
+            soma += i;
+        }
+        double media = soma/notas.length;
+        return media;
+    } 
 
     
 }
