@@ -22,12 +22,13 @@ public class Professor extends Pessoa implements Autenticavel{
         this.senha = senha;
     }
     
+    
     @Override
     public boolean login(String senha){
-        senhareal = 'senhadoprofessor'
-        boolean flag = false
-        if senha.equals(senhareal){
-            flag = true
+        String senhareal = "senhadoprofessor";
+        boolean flag = false;
+        if (senha.equals(senhareal)){
+            flag = true;
         }
         return flag;
     }
