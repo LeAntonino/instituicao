@@ -1,13 +1,16 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package br.edu.instituicao.model;
 
-/**
- *
- * @author anton
- */
-public class Coordenador extends Professor {
-    
+import br.edu.instituicao.interfaces.Autenticavel;
+
+
+public class Coordenador extends Professor implements Autenticavel {
+    @Override
+    public boolean login(String senha){
+        String senhareal = "senhadocoordenador";
+        boolean flag = false;
+        if (senha.equals(senhareal)){
+            flag = true;
+        }
+        return flag;
+    }
 }
