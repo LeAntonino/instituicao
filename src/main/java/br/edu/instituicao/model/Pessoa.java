@@ -3,7 +3,7 @@ package br.edu.instituicao.model;
 
 public abstract class Pessoa {
     private String nome;
-    private int cpf;
+    private long cpf;
     private String email;
 
     public String getNome() {
@@ -14,11 +14,11 @@ public abstract class Pessoa {
         this.nome = nome;
     }
 
-    public int getCpf() {
+    public long getCpf() {
         return cpf;
     }
 
-    public void setCpf(int cpf) {
+    public void setCpf(long cpf) {
         this.cpf = cpf;
     }
 

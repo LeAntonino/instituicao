@@ -3,14 +3,14 @@ import br.edu.instituicao.interfaces.Autenticavel;
 
 
 public class Professor extends Pessoa implements Autenticavel{
-    private int siape;
+    private long siape;
     private String senha;
 
-    public int getSiape() {
+    public long getSiape() {
         return siape;
     }
 
-    public void setSiape(int siape) {
+    public void setSiape(long siape) {
         this.siape = siape;
     }
 

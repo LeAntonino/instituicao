@@ -14,13 +14,16 @@ public class Secretaria {
         for(Pessoa q : Pessoas){
             if (p.getCpf() == q.getCpf()){
                 System.out.println("ERRO, CPF JA CADASTRADO");
+                break;
             }
-            if(p instanceof Aluno aluno && q instanceof Aluno aluno2){
+            else if(p instanceof Aluno aluno && q instanceof Aluno aluno2){
                 if(aluno.getMatricula() == aluno2.getMatricula()){
                     System.out.println("ERRO, MATRICULA JA CADASTRADA");
+                    break;
                 }
             }
         }
+        Pessoas.add(p);
 
     }
     
@@ -32,7 +35,7 @@ public class Secretaria {
                     " | MATRICULA: " + aluno.getMatricula() + " | MEDIA FINAL: " + aluno.getMediaFinal()
                 );
                 
-            }else if (p instanceof Professor professor){
+            }else if (p instanceof Professor professor && !(p instanceof Coordenador)){
                 
                 System.out.println("PROFESSOR | NOME: " + professor.getNome() + " | CPF: " + professor.getCpf() + " | EMAIL: " + professor.getEmail() + 
                     " | SIAPE: " + professor.getSiape());
@@ -46,7 +49,7 @@ public class Secretaria {
         }
     }
     
-    public Aluno Localizar(int Matricula){
+    public Aluno Localizar(long Matricula){
         for(Pessoa p : Pessoas){
             if(p instanceof Aluno aluno){
                 if(aluno.getMatricula() == Matricula){

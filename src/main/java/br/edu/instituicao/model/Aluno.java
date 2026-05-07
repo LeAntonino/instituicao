@@ -3,22 +3,22 @@ package br.edu.instituicao.model;
 import br.edu.instituicao.interfaces.Avaliavel;
 
 public class Aluno extends Pessoa implements Avaliavel {
-    private int matricula;
-    private float[] notas = {0,0,0,0};
+    private long matricula;
+    private double[] notas = {0,0,0,0};
 
-    public int getMatricula() {
+    public long getMatricula() {
         return matricula;
     }
 
-    public void setMatricula(int matricula) {
+    public void setMatricula(long matricula) {
         this.matricula = matricula;
     }
 
-    public float[] getNotas() {
+    public double[] getNotas() {
         return notas;
     }
 
-    public void setNotas(float[] notas) {
+    public void setNotas(double[] notas) {
         this.notas = notas;
     }
     
