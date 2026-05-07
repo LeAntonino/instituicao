@@ -4,7 +4,7 @@ import br.edu.instituicao.interfaces.Avaliavel;
 
 public class Aluno extends Pessoa implements Avaliavel {
     private int matricula;
-    private float[] notas = new float[4];
+    private float[] notas = {0,0,0,0};
 
     public int getMatricula() {
         return matricula;
