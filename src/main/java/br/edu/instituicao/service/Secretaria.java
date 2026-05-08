@@ -14,12 +14,18 @@ public class Secretaria {
         for(Pessoa q : Pessoas){
             if (p.getCpf() == q.getCpf()){
                 System.out.println("ERRO, CPF JA CADASTRADO");
-                break;
+                return;
             }
             else if(p instanceof Aluno aluno && q instanceof Aluno aluno2){
                 if(aluno.getMatricula() == aluno2.getMatricula()){
                     System.out.println("ERRO, MATRICULA JA CADASTRADA");
-                    break;
+                    return;
+                }
+            }
+            else if(p instanceof Professor professor && q instanceof Professor professor2){
+                if(professor.getSiape() == professor2.getSiape()){
+                    System.out.println("ERRO, SIAPE JA CADASTRADO");
+                    return;
                 }
             }
         }
@@ -55,7 +61,26 @@ public class Secretaria {
                 if(aluno.getMatricula() == Matricula){
                     return aluno;
                 }
-            }      
+            }
+            else{
+                System.out.println("Erro, matricula nao cadastrada");
+                return null;
+            }
+        }
+        return null;
+    }
+    
+    public Professor LocalizarProfessor (long Siape){
+        for(Pessoa p : Pessoas){
+            if(p instanceof Professor professor){
+                if(professor.getSiape() == Siape){
+                    return professor;
+                }
+            }
+            else{
+                System.out.println("Erro, Siape nao cadastrado");
+                return null;
+            }
         }
         return null;
     }

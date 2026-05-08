@@ -14,7 +14,7 @@ public class Professor extends Pessoa implements Autenticavel{
         this.siape = siape;
     }
 
-    public String getSenha() {
+    protected String getSenha() {
         return senha;
     }
 
@@ -22,10 +22,9 @@ public class Professor extends Pessoa implements Autenticavel{
         this.senha = senha;
     }
     
-    
     @Override
     public boolean login(String senha){
-        String senhareal = "senhadoprofessor";
+        String senhareal = this.getSenha();
         boolean flag = false;
         if (senha.equals(senhareal)){
             flag = true;
