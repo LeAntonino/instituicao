@@ -2,6 +2,7 @@
 projeto POO de uma instituição academica
 
 ## como rodar o projeto
+abra o projeto em uma IDE para acessar-lo
 o projeto pode ser rodado a partir da classe Main, no pacote br.edu.instituicao.main, após rodada,
 deverá se utilizar do console para interagir com o projeto, inserindo dados e valores numéricos quando pedido
 
