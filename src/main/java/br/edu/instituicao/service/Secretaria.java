@@ -10,7 +10,7 @@ public class Secretaria {
     private final ArrayList<Pessoa> Pessoas = new ArrayList<>();
     
     /*
-    [PADRAO] o padrão Singleton foi adicionado a seguir, para evitar que multiplas instâncias de Secretaria sejam
+    [PADRAO] o padrão Singleton foi implementado a seguir, para evitar que multiplas instâncias de Secretaria sejam
     criadas, assim evitando a possibilidade de conflitos entre multiplas instancias e evitando o desperdicio de
     memoria potencialmente criado caso multiplas instâncias existirem
     */
