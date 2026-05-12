@@ -9,6 +9,27 @@ import br.edu.instituicao.model.Professor;
 public class Secretaria {
     private final ArrayList<Pessoa> Pessoas = new ArrayList<>();
     
+    /*
+    [PADRAO] o padrão Singleton foi adicionado a seguir, para evitar que multiplas instâncias de Secretaria sejam
+    criadas, assim evitando a possibilidade de conflitos entre multiplas instancias e evitando o desperdicio de
+    memoria potencialmente criado caso multiplas instâncias existirem
+    */
+    
+    private static Secretaria instance;
+
+    private Secretaria() {
+    }
+    
+    public static Secretaria getInstance(){ 
+        if(instance == null){
+            instance = new Secretaria();
+        }    
+        return instance;
+    }
+    
+    /*
+    Fim do padrão Singleton
+    */
     
     public void Adicionar(Pessoa p){
         for(Pessoa q : Pessoas){

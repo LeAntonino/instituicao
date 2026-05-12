@@ -11,7 +11,8 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) {
-        Secretaria sec = new Secretaria();
+        
+        Secretaria sec = Secretaria.getInstance();
         RelatorioAcademico rel = new RelatorioAcademico();
         
         boolean islooping = true;
