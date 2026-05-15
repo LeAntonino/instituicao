@@ -11,6 +11,10 @@ a classe pessoa foi criada como abstrata pois serve como "esqueleto" para as cla
 o programa foi designado para gerenciar estas três classes, logo para prevenir que a classe pessoa seja instanciada diretamente,
 foi declarada como abstrata
 
+## padrões adicionados:
+padrão Singleton para permitir apenas uma instância da classe Secretaria
+padrão Factory Method para criar uma classe específica para a instanciação de objetos, separando essa responsabilidade da classe main
+
 ## exemplo do programa funcionando:
 ===== SISTEMA ACADEMICO =====
 1 - Adicionar Aluno ao sistema

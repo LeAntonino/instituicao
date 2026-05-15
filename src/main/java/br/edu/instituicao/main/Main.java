@@ -1,5 +1,6 @@
 package br.edu.instituicao.main;
 
+import br.edu.instituicao.factory.PessoaFactory;
 import br.edu.instituicao.model.Aluno;
 import br.edu.instituicao.model.Coordenador;
 import br.edu.instituicao.service.RelatorioAcademico;
@@ -8,7 +9,7 @@ import br.edu.instituicao.service.Secretaria;
 import java.util.Scanner;
 
 
-public class Main {
+public class Main extends PessoaFactory {
 
     public static void main(String[] args) {
         
@@ -33,7 +34,7 @@ public class Main {
                 
                 case 1 -> {
                     
-                    Aluno p = new Aluno();
+                        Aluno p = (Aluno) criarPessoa("aluno");
                         
                         try{
                         System.out.println("Insira o nome do Aluno: ");
@@ -70,7 +71,7 @@ public class Main {
                     switch(tipodepessoa){
                                               
                         case 1 -> {
-                            Professor p = new Professor();
+                            Professor p = (Professor) criarPessoa("professor");
                             
                             try{
                             System.out.println("Insira o nome do Professor: ");
@@ -102,7 +103,7 @@ public class Main {
                         }
                         
                         case 2 -> {
-                            Coordenador p = new Coordenador();
+                            Coordenador p = (Coordenador) criarPessoa("coordenador");
                             
                             try{
                             System.out.println("Insira o nome do Coordenador: ");
